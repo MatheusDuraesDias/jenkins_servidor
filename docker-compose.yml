@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jk_ct_servidor-matheus
+    image: jk_im_servidor_matheus:0.1
+    build:
+      context: .
+      dockerfile: dockerfileJenkins
+    ports:
+      - "4323:8080"
+    networks:
+      - jhonatas
+
+networks:
+  jhonatas:
